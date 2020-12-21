@@ -59,11 +59,10 @@ if __name__ == '__main__':
                 )
             print(line)
         elif command.startswith('select'):
-            name_user = input("Введите название продукта ")
-
+            g = input("Введите название продукта ")
             count = 0
             for product in products:
-                if name_user == product.get('name'):
+                if g == product.get('name'):
                     count += 1
                     print(
                         '{:>4}: {} {} {}'.format(count, product.get('name', ' '), product.get('shop', ' '),
